@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/backgroundLayers.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/animation.css" type="text/css">
+    <title>Panick Running!!</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="fundoGame">
+            <div id="inicio" onclick="start()">
+                <h1>Resgate o soldado</h1>
+                <p>Utilize a tecla W para movimentar o avião para cima, a tecla S para movimentar o avião
+                    para baixo e a tecla D para atirar.</p>
+                <p>Clique aqui para iniciar!</p>
+            </div>
+        </div>
+    </div>
+
+    <audio src="assets/sons/som.mp3" preload="auto" id="somDisparo"></audio>
+    <audio src="assets/sons/explosao.mp3" preload="auto" id="somExplosao"></audio>
+    <audio src="assets/sons/musica_fundo.mp3" preload="auto" id="musica"></audio>
+    <audio src="assets/sons/gameover.mp3" preload="auto" id="somGameover"></audio>
+    <audio src="assets/sons/perdido.mp3" preload="auto" id="somPerdido"></audio>
+    <audio src="assets/sons/resgate.mp3" preload="auto" id="somResgate"></audio>
+
+    <script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-collision.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+    
+</body>
+
+</html>

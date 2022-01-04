@@ -1,0 +1,71 @@
+#layer1 {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-image: url(../imgs/background/Background_1920x1080_1.png);
+    background-size: 1280px,720px;
+}
+
+#layer2 {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-image: url(../imgs/background/Background_1920x1080_2.png);
+    background-size: 1280px,720px;    
+}
+
+#layer3 {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-image: url(../imgs/background/Background_1920x1080_3.png);
+    background-size: 1280px,720px;    
+}
+
+#layer4 {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-image: url(../imgs/background/Background_1920x1080_4.png);
+    background-size: 1280px,720px;    
+}
+
+#layer5 {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-image: url(../imgs/background/Background_1920x1080_5.png);
+    background-size: 1280px,720px;    
+}
+
+#layer6 {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-image: url(../imgs/background/Background_1920x1080_6.png);
+    background-size: 1280px,720px;    
+}
+
+#layer7 {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-image: url(../imgs/background/Background_1920x1080_7.png);
+    background-size: 1280px,720px;    
+}
+
+#layer8 {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-image: url(../imgs/background/Background_1920x1080_8.png);
+    background-size: 1280px,720px;    
+}
+
+#layer9 {
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    background-image: url(../imgs/background/Background_1920x1080_9.png);
+    background-size: 1280px,720px;    
+}

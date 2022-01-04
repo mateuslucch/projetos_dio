@@ -1,0 +1,186 @@
+.soldierWalk {
+    width: 140px;
+    height: 51px;
+    background-image: url(../imgs/soldier_walking.png);
+    animation: play2 .9s steps(8) infinite;
+
+    -webkit-animation: play2 .9s steps(8) infinite;
+    -moz-animation: play2 .9s steps(8) infinite;
+    -ms-animation: play2 .9s steps(8) infinite;
+    -o-animation: play2 .9s steps(8) infinite;
+}
+
+@keyframes play2 {
+    from {background-position: 0px;}
+    to {background-position: -1120px;}
+}
+
+@-webkit-animation play2 {
+    from {background-position: 0px;}
+    to {background-position: -1120px;}
+}
+
+@-moz-animation play2 {
+    from {background-position: 0px;}
+    to {background-position: -1120px;}
+}
+
+@-ms-animation play2 {
+    from {background-position: 0px;}
+    to {background-position: -1120px;}
+}
+
+@-o-animation play2 {
+    from {background-position: 0px;}
+    to {background-position: -1120px;}
+}
+
+.soldierDead { /*amigo morte*/
+    width: 44px;
+    height: 51px;
+    background-image: url(../imgs/amigo_morte.png);
+    animation: play3 2s steps(8) infinite;
+
+    -webkit-animation: play3 2s steps(8) infinite;
+    -moz-animation: play3 2s steps(8) infinite;
+    -ms-animation: play3 2s steps(8) infinite;
+    -o-animation: play3 2s steps(8) infinite;
+}
+
+@keyframes play3 {
+    from {background-position: 0px;}
+    to {background-position: -308px;}
+}
+
+@-webkit-animation play3 {
+    from {background-position: 0px;}
+    to {background-position: -308px;}
+}
+
+@-moz-animation play3 {
+    from {background-position: 0px;}
+    to {background-position: -308px;}
+}
+
+@-ms-animation play3 {
+    from {background-position: 0px;}
+    to {background-position: -308px;}
+}
+
+@-o-animation play3 {
+    from {background-position: 0px;}
+    to {background-position: -308px;}
+}
+
+.planeExplosion {
+    width: 256px;
+    height: 256px;    
+    background-image: url(../imgs/focker_explosion.png);
+    
+    animation: planeExplosionAnim 0.5s steps(4) 1;
+
+    -webkit-animation: planeExplosionAnim 0.5s steps(4) 1; /*steps = numero frames*/
+    -moz-animation: planeExplosionAnim 0.5s steps(4) 1;
+    -ms-animation: planeExplosionAnimplay4 0.5s steps(4) 1;
+    -o-animation: planeExplosionAnim 0.5s steps(4) 1;
+}
+
+@keyframes planeExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -1024px;}
+}
+
+@-webkit-animation planeExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -1024px;}
+}
+
+@-moz-animation planeExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -1024px;}
+}
+
+@-ms-animation planeExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -1024px;}
+}
+
+@-o-animation planeExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -1024px;}
+}
+
+.tankMove {
+    width: 256px;
+    height: 256px;    
+    background-image: url(../imgs/tank_move.png);
+    
+    animation: tankMoveAnim 1s steps(8) infinite;
+
+    -webkit-animation: tankMoveAnim 1s steps(8) infinite; /*steps = numero frames*/
+    -moz-animation: tankMoveAnim 1s steps(8) infinite;
+    -ms-animation: tankMoveAnim 1s steps(8) infinite;
+    -o-animation: tankMoveAnim 1s steps(8) infinite;
+}
+
+@keyframes tankMoveAnim {
+    from {background-position: 0px;}
+    to {background-position: -2048px;}
+}
+
+@-webkit-animation tankMoveAnim {
+    from {background-position: 0px;}
+    to {background-position: -2048px;}
+}
+
+@-moz-animation tankMoveAnim {
+    from {background-position: 0px;}
+    to {background-position: -2048px;}
+}
+
+@-ms-animation tankMoveAnim {
+    from {background-position: 0px;}
+    to {background-position: -2048px;}
+}
+
+@-o-animation tankMoveAnim {
+    from {background-position: 0px;}
+    to {background-position: -2048px;}
+}
+
+.tankExplosion {
+    width: 44px;
+    height: 51px;
+    background-image: url(../imgs/tank_explosion.png);
+    animation: play5 2s steps(11) 1;
+
+    -webkit-animation: tankExplosionAnim 2s steps(11) 1;
+    -moz-animation: tankExplosionAnim 2s steps(11) 1;
+    -ms-animation: tankExplosionAnim 2s steps(11) 1;
+    -o-animation: tankExplosionAnim 2s steps(11) 1;
+}
+
+@keyframes tankExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -2816px;}
+}
+
+@-webkit-animation tankExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -2816px;}
+}
+
+@-moz-animation tankExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -2816px;}
+}
+
+@-ms-animation tankExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -2816px;}
+}
+
+@-o-animation tankExplosionAnim {
+    from {background-position: 0px;}
+    to {background-position: -2816px;}
+}
