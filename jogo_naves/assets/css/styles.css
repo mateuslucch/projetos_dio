@@ -8,17 +8,13 @@ body{
     font-family: Titulo;
     max-width: 1280px;
     margin: auto;
-    background-image: url(../imgs/fundo.jpg);
+
 }
 
 h1 {
     font-family: Titulo;
     font-size: 40px;
     color: #603A03;
-}
-
-body {
-    background-image: url(../imgs/fundo.jpg);
 }
 
 #container {
@@ -83,7 +79,7 @@ body {
 
 #inicio {
     width: 350px;
-    height: 200px;
+    height: 250px;
     background-color: #FFF;
     margin-left: auto;
     margin-right: auto;

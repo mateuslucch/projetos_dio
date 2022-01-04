@@ -10,3 +10,6 @@ W - Move avião para cima
 S - Move avião para baixo
 D - Atira
 
+Corrigido bugs:
+- Player morrendo instantaneamente quando colide
+- Tela fim de jogo escondida

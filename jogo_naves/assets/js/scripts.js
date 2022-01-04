@@ -31,15 +31,14 @@ function start() {
     var totalPontos = 0;
     var salvos = 0;
     var perdidos = 0;
-    var canShoot = true;
-    var velocidade = 5;
+    var canShoot = true;    
     var posicaoY = parseInt(Math.random() * 334);
     var tecla = {
         W: 87,
         S: 83,
         D: 68
     }
-
+    
     jogo.pressionou = [];
 
     var shootSound = document.getElementById("somDisparo");
@@ -115,7 +114,7 @@ function start() {
     }
 
     function moveBackground() {
-        
+
         $("#layer1").css("background-position", moveLeft($("#layer1")) - 1);
         $("#layer2").css("background-position", moveLeft($("#layer2")) - 2);
         $("#layer3").css("background-position", moveLeft($("#layer3")) - 3);
@@ -124,7 +123,7 @@ function start() {
         $("#layer6").css("background-position", moveLeft($("#layer6")) - 4);
         $("#layer7").css("background-position", moveLeft($("#layer7")) - 4);
         $("#layer8").css("background-position", moveLeft($("#layer8")) - 4);
-        $("#layer9").css("background-position", moveLeft($("#layer9")) - 4);        
+        $("#layer9").css("background-position", moveLeft($("#layer9")) - 4);
 
         function moveLeft(layer) {
             return parseInt($(layer.selector).css("background-position"));
@@ -239,16 +238,16 @@ function start() {
         var collision6 = $(enemy2._cssId.selector).collision($(friendlyChar._cssId.selector));
 
         if (collision1.length > 0) { // indica que houve colisão
-
+            
             playerDamage();
             inimigo1X = parseInt($(enemy1._cssId.selector).css("left"));
             inimigo1Y = parseInt($(enemy1._cssId.selector).css("top"));
-
             planeExplosion(inimigo1X, inimigo1Y);
 
             $(enemy1._cssId.selector).remove();
 
             reposicionaInimigo1();
+            
         }
 
         if (collision2.length > 0) {
@@ -264,7 +263,7 @@ function start() {
         }
 
         if (collision3.length > 0) {
-
+            
             enemy1.speed += 1;
             scoreHandler(100)
             inimigo1X = parseInt($(enemy1._cssId.selector).css("left"));
@@ -365,9 +364,9 @@ function start() {
     }
 
     function reposicionaInimigo1() {
-
-        var tempoColisao4 = window.setInterval(reposiciona4, 500);
-        function reposiciona4() {
+        
+        var tempoColisao4 = window.setInterval(reposiciona1, 1);
+        function reposiciona1() {
             window.clearInterval(tempoColisao4);
             tempoColisao4 = null;
 
@@ -379,13 +378,14 @@ function start() {
                 $(enemy1._cssId.selector).css("top", posicaoY);
             }
         }
+        playerCollided = false;
     }
 
     function reposicionaInimigo2() {
 
-        var tempoColisao4 = window.setInterval(reposiciona4, 5000);
+        var tempoColisao4 = window.setInterval(reposiciona2, 5000);
 
-        function reposiciona4() {
+        function reposiciona2() {
             window.clearInterval(tempoColisao4);
             tempoColisao4 = null;
 
@@ -393,6 +393,7 @@ function start() {
                 $(backgroundCssId.selector).append("<div id='inimigo2' class='tankMove'></div>");
             }
         }
+        playerCollided = false;
     }
 
     function reposicionaAmigo() {
@@ -446,6 +447,19 @@ function start() {
         enemy1._cssId.remove();
         $(enemy2._cssId.selector).remove();
         $(friendlyChar._cssId.selector).remove();
+        removeLayers()
+    }
+    function removeLayers()
+    {
+        $("#layer1").remove();
+        $("#layer2").remove();
+        $("#layer3").remove();
+        $("#layer4").remove();
+        $("#layer5").remove();
+        $("#layer6").remove();
+        $("#layer7").remove();
+        $("#layer8").remove();
+        $("#layer9").remove();        
     }
 }
 
