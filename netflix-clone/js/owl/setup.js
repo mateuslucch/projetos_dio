@@ -4,12 +4,21 @@ $('.owl-carousel').owlCarousel({
     nav: false, // setas navegação true or false
     responsive: {
         0: {     // numero de pixels
-            items: 2 // numero maximo de items para o numero de pixels
+            items: 1 // numero maximo de items para o numero de pixels
+        },
+        400: {
+            items: 2
         },
         600: {
             items: 3
         },
+        800: {
+            items: 4
+        },
         1000: {
+            items: 6
+        },
+        1200: {
             items: 7
         }
     }

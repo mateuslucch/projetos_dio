@@ -14,13 +14,13 @@
     <!-- responsividade -->
     <link rel="stylesheet" href="./style/responsive.css">
 
-    <title>NETFLIX CLONE</title>
+    <title>YE OLDE FLIX</title>
 </head>
 
 <body>
     <header>
         <div class="container">
-            <h2 class="logo">NETFLIX</h2>
+            <h2 class="logo">YE OLDE FLIX</h2>
             <nav>
                 <a href="#">Inicio</a>
                 <a href="#">Séries</a>
@@ -34,11 +34,12 @@
         <div class="filme-principal">
             <!-- conceito wrapper -->
             <div class="container">
-                <h3 class="titulo">HOUSE OF CARDS</h3>
-                <p class="descricao">Nada pode impedir o político sem escrúpulos Frank Underwood de conquistar
-                    Washington. Assista agora a nova temporada de House of Cards que está imperdível.</p>
+                <h3 class="titulo">Le Voyage Dans la Lune (1902)</h3>
+                <p class="descricao">Le Voyage Dans la Lune (Trip to the Moon, in English) is perhaps Georges Méliès'
+                    most famous film, and is considered to
+                    be the first science fiction film in cinematic history.</p>
                 <div class="botoes">
-                    <button role="button" class="botao">
+                    <button role="button" class="botao item" data-url="https://archive.org/embed/LeVoyageDansLaLun/">
                         <i class="fas fa-play"></i>
                         ASSISTIR AGORA
                     </button>
@@ -49,23 +50,52 @@
                 </div>
             </div>
         </div>
+        <div class="carousel-movies">
+            <h3>Populares Na NETFLIX</h3>
+            <div id="pop-movies" class="owl-carousel owl-theme">
+                <div class="item" data-url="https://archive.org/embed/Gertie/">
+                    <img src="./img/220px-Gertie_the_Dinosaur_poster.jpg" alt="filme 1 icone" srcset="">
+                </div>
+                <div class="item" data-url="https://archive.org/embed/LaGrenouille/">
+                    <img src="./img/The-Frog.jpg" alt="filme 2 icone" srcset="">
+                </div>
+                <div class="item" data-url="https://archive.org/embed/DogFactory1904EdisonManufacturingCompanyUsa/">
+                    <img src="./img/DogFactory1904-01.jpg" alt="filme 3 icone" srcset="">
+                </div>
+                <div class="item" data-url="https://archive.org/embed/Frankenstein1910/">
+                    <img src="./img/frankensteinogle11.png" alt="filme 4 icone" srcset="">
+                </div>
+                <div class="item" data-url="https://archive.org/embed/TheGreatTrainRobbery1903_201307/">
+                    <img src="./img/greattrainrobbery.jpeg" alt="filme 5 icone" srcset="">
+                </div>
+                <div class="item" data-url="https://archive.org/embed/silent-baron-munchausens-dream/">
+                    <img src="./img/images-6.jpeg" alt="filme 6 icone" srcset="">
+                </div>
+                <div class="item" data-url="https://archive.org/embed/LeChaudronInfernal/">
+                    <img src="./img/Le_Chaudron_infernal.jpg" alt="filme 7 icone" srcset="">
+                </div>
+                <div class="item" data-url="https://archive.org/embed/ScroogeOrMarleysGhost1901/">
+                    <img src="./img/scrooge-thumb.jpg" alt="filme 8 icone" srcset="">
+                </div>
+                <div class="item" data-url="https://archive.org/embed/The_Christmas_Angel/">
+                    <img src="./img/the-crhistmas-angel.jpg" alt="filme 9 icone" srcset="">
+                </div>
+                <div class="item" data-url="https://archive.org/embed/TheGeneral1926/">
+                    <img src="./img/the-general-buster-keaton-3.jpg" alt="filme 10 icone" srcset="">
+                </div>
+            </div>
+        </div>
+
     </main>
 
-    <div class="carousel-movies">
-        <div class="owl-carousel owl-theme">
-            <div class="item"> <img src="./img/mini1.jpg" alt="filme 1 icone" srcset=""> </div>
-            <div class="item"> <img src="./img/mini2.jpg" alt="filme 2 icone" srcset=""> </div>
-            <div class="item"> <img src="./img/mini3.jpg" alt="filme 3 icone" srcset=""> </div>
-            <div class="item"> <img src="./img/mini4.jpg" alt="filme 4 icone" srcset=""> </div>
-            <div class="item"> <img src="./img/mini5.jpg" alt="filme 5 icone" srcset=""> </div>
-            <div class="item"> <img src="./img/mini6.jpg" alt="filme 6 icone" srcset=""> </div>
-            <div class="item"> <img src="./img/mini7.jpg" alt="filme 7 icone" srcset=""> </div>
-            <div class="item"> <img src="./img/mini8.jpg" alt="filme 8 icone" srcset=""> </div>
-            <div class="item"> <img src="./img/mini9.jpg" alt="filme 9 icone" srcset=""> </div>
-            <div class="item"> <img src="./img/mini10.jpg" alt="filme 10 icone" srcset=""> </div>
+    <footer>
+        <div class="footer">
+            Webpage by: Mateus Antonio Lucchese
         </div>
-    </div>
+    </footer>
 
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/7deee08644.js" crossorigin="anonymous"></script>
     <script src="./js/owl/jquery.min.js"></script>
     <script src="./js/owl/owl.carousel.min.js"></script>

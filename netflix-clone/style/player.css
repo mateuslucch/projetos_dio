@@ -1,0 +1,39 @@
+:root {
+    --vermelho: #e50914;
+    --preta: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* nada ultrapassa borda da caixa */
+}
+
+/* elementos base */
+body {
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header {
+    text-align: left;
+    font-size: 32px;
+    margin: 10px 50px;    
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+
+i{
+    width: auto;
+    color: aliceblue;
+    cursor: pointer;
+}
