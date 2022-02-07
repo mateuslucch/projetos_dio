@@ -1,16 +1,17 @@
-let popMoviesList = $("#pop-movies");
-let popMovie = $(".item");
 
-function getMovieData(classe) {
-    console.log(classe);
-    localStorage["movie-url"] = classe;
+function getMovieData(urlString) {
+    console.log(urlString);
+    localStorage["movie-url"] = urlString;
 }
 
 function openPlayerPage() {
     window.location.href = 'player.html';
 }
 
-$(document).on("click", ".item", function (ev) {
-    getMovieData($(this).attr('data-url'));
-    openPlayerPage();
+// check clicks on .item elements, save data, open player window
+$(document).on("click", ".item", function (ev) {    
+    if ($(this).attr('data-url') != "#") {
+        getMovieData($(this).attr('data-url'));
+        openPlayerPage();
+    }
 });

@@ -1,26 +1,35 @@
 :root {
     --vermelho: #e50914;
     --preta: #141414;
+
+    --color1: #96c5bf;
+    --color2: #435d54;
+    --color3: #9d8863;
+    --color4: #d0cdb2;
+
+    --color5: #393939;
+    --color6: #c47c63;
+    --color7: #645a41;
+    --color8: #898055;
+    --color9: #bfbdb0;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* nada ultrapassa borda da caixa */
 }
 
-/* elementos base */
 body {
-    background: var(--preta);
+    background: var(--color5);
     font-family: 'Arial', Times, serif;
-    color: white;
+    color: var(--color1);
 }
 
 header {
     text-align: left;
     font-size: 32px;
-    margin: 10px 50px;    
+    margin: 10px 50px;
 }
 
 #main {
@@ -32,8 +41,8 @@ header {
     margin-top: 100px;
 }
 
-i{
+i {
     width: auto;
-    color: aliceblue;
+    color: var(--color1);
     cursor: pointer;
 }

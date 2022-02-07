@@ -1,20 +1,37 @@
 :root {
     --vermelho: #e50914;
     --preta: #141414;
+    --color1: #96c5bf;
+
+    --color2: #435d54;
+    --color2-transparent: #435d547e;
+    --color3: #9d8863;
+    --color4: #d0cdb2;
+
+    --color5: #393939;
+    --color6: #c47c63;
+    --color7: #645a41;
+    --color8: #898055;
+    --color9: #bfbdb0;
+}
+
+@font-face {
+    font-family: 'Platonick';
+    src: url("../assets/fonts/platonick-normal.regular.ttf") format("truetype");
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* nada ultrapassa borda da caixa */
 }
 
 /* elementos base */
 body {
-    background: var(--preta);
-    font-family: 'Arial', Times, serif;
-    color: white;
+    background-color: var(--color3);
+    font-family: 'Platonick', 'Arial', Times, serif;
+    color: var(--color5);
+    font-weight: 100;
 }
 
 /* header*/
@@ -27,28 +44,29 @@ header .container {
 
 header .logo {
     margin-left: 5px;
-    color: var(--vermelho);
-    font-family: 'Arial Black';
-    font-size: 40px;
+    color: var(--color1);
+    font-size: 55px;
     cursor: default;
+    font-weight: 100;
 }
 
 header nav a {
     text-decoration: none;
-    color: #aaa;
-    margin-right: 10px;
+    color: var(--color1);
+    margin-right: 5px;
+    font-size: 24px;
 }
 
 header nav a:hover {
-    color: #fff;
+    color: var(--color2);
 }
 
 /* filme destaque */
-.filme-principal {
+.filme-destaque {
     font-size: 16px;
-    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%), url('../img/Voyagedanslalune1.jpg');
+    background: linear-gradient(rgba(67, 93, 84, .1), rgba(67, 93, 84, .5)), url('../img/Voyagedanslalune1.jpg');
     background-size: cover;
-
+    color: var(--color9);
     height: 400px;
 
     display: flex;
@@ -57,21 +75,23 @@ header nav a:hover {
     align-items: flex-start;
 }
 
-.filme-principal .descricao {
+.filme-destaque .descricao {
     margin-top: 10px;
     margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.filme-principal .titulo {
+.filme-destaque .titulo {
     margin-top: 15%;
     font-size: 40px;
-    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-weight: 100;
+    color: var(--color1);
 }
 
 .botao {
-    background-color: rgba(0, 0, 0, .50);
+    background-color: var(--color2-transparent);
     border: none;
-    color: white;
+    color: var(--color1);
 
     padding: 15px 30px;
     margin-right: 15px;
@@ -79,11 +99,12 @@ header nav a:hover {
 
     cursor: pointer;
     transition: .5s ease all;
+    font-size: 15px;
 }
 
 .botao:hover {
-    background-color: white;
-    color: var(--preta);
+    background-color: var(--color1);
+    color: var(--color2);
 }
 
 .botao i {
@@ -107,20 +128,24 @@ header nav a:hover {
 
 /* filmes populares */
 .carousel-movies {
+    background-color: var(--color4);
+}
 
-    margin-top: 5px;
+.carousel-background {
     margin-left: auto;
     margin-right: auto;
+    padding: 0 50px;
     max-width: 1600px;
 }
 
 .carousel-movies h3 {
     /*titulo*/
-    font-size: 22px;
-    margin-left: 40px;
+    padding-left: 15px;
+    font-size: 35px;
     margin-top: 40px;
     margin-bottom: 5px;
     cursor: default;
+    font-weight: 100;
 }
 
 .carousel-movies .item {
@@ -138,5 +163,8 @@ header nav a:hover {
 .footer {
     display: flex;
     justify-content: center;
-    margin: 35px 0px;
+    margin-top: 35px;
+    padding: 15px 0px;
+    font-size: 20px;
+    background-color: var(--color6);
 }

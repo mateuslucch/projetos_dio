@@ -1,10 +1,11 @@
 let mainElement = document.getElementById("main");
 let playerBox
 
-function openMainMenu() {
+function backMainMenu() {
     window.location.href = 'index.html';
 }
 
+// mount player box
 function appendPlayer() {
     playerBox = document.createElement("iframe");
     playerBox.src = movieUrl;
@@ -24,10 +25,12 @@ const backMenu = document.getElementById("back-menu");
 
 appendPlayer();
 
-backMenu.addEventListener('click', openMainMenu);
+backMenu.addEventListener('click', backMainMenu);
 
-// player tag standart
+
 /*
+video player tag standart from internet archive:
+
 <iframe 
 src="https://archive.org/embed/silent-baron-munchausens-dream&autoplay=1" 
 width="640" 
@@ -37,6 +40,6 @@ webkitallowfullscreen="true"
 mozallowfullscreen="true" 
 allowfullscreen></iframe>
 
-archiuve video link model
-https://archive.org/embed/silent-baron-munchausens-dream
+archiuve video link model:
+https://archive.org/embed/name movie
 */
