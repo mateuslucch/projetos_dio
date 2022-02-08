@@ -1,0 +1,32 @@
+/* 
+TOO UGLY, MAYBE LOOK BETTER WITH A MORE ELABORATED VINTAGE DESIGN
+:root {
+    --vermelho: #e50914;
+    --preta: #141414;
+    --color1: #96c5bf;
+
+    --color2: #435d54;
+    --color2-transparent: #435d547e;
+    --color3: #9d8863;
+    --color4: #d0cdb2;
+
+    --color5: #393939;
+    --color6: #c47c63;
+    --color7: #645a41;
+    --color8: #898055;
+    --color9: #bfbdb0;
+} */
+/*
+Raisin Black
+Hex: #262626
+Black Olive
+Hex: #3D3D3D
+Dark Liver
+Hex: #4F4F4F
+Gray
+Hex: #7F7F7F
+Onyx
+Hex: #393939
+Eerie Black
+Hex: #1E1E1E
+*/

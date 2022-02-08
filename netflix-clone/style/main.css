@@ -1,18 +1,12 @@
 :root {
-    --vermelho: #e50914;
-    --preta: #141414;
-    --color1: #96c5bf;
-
-    --color2: #435d54;
-    --color2-transparent: #435d547e;
-    --color3: #9d8863;
-    --color4: #d0cdb2;
-
+    --color1: #262626;
+    --color2: #3D3D3D;
+    --color2-transparent: #3d3d3d7e;
+    --color3: #4F4F4F;
+    --color4: #7F7F7F;
+    --color4-transparent: #7f7f7f5b;
     --color5: #393939;
-    --color6: #c47c63;
-    --color7: #645a41;
-    --color8: #898055;
-    --color9: #bfbdb0;
+    --color6: #1E1E1E;
 }
 
 @font-face {
@@ -28,7 +22,7 @@
 
 /* elementos base */
 body {
-    background-color: var(--color3);
+    background-color: var(--color6);
     font-family: 'Platonick', 'Arial', Times, serif;
     color: var(--color5);
     font-weight: 100;
@@ -36,6 +30,10 @@ body {
 
 /* header*/
 header .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -44,7 +42,7 @@ header .container {
 
 header .logo {
     margin-left: 5px;
-    color: var(--color1);
+    color: var(--color4);
     font-size: 55px;
     cursor: default;
     font-weight: 100;
@@ -52,21 +50,30 @@ header .logo {
 
 header nav a {
     text-decoration: none;
-    color: var(--color1);
+    color: var(--color4);
     margin-right: 5px;
     font-size: 24px;
 }
 
 header nav a:hover {
-    color: var(--color2);
+    color: var(--color6);
+}
+
+/* main */
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
 }
 
 /* filme destaque */
 .filme-destaque {
+
+    border-radius: 45px;
     font-size: 16px;
-    background: linear-gradient(rgba(67, 93, 84, .1), rgba(67, 93, 84, .5)), url('../img/Voyagedanslalune1.jpg');
+    background: linear-gradient(rgba(57, 57, 57, 1), rgba(57, 57, 57, .1)), url('../img/Voyagedanslalune1.jpg');
     background-size: cover;
-    color: var(--color9);
+    color: var(--color4);
     height: 400px;
 
     display: flex;
@@ -75,31 +82,37 @@ header nav a:hover {
     align-items: flex-start;
 }
 
+.filme-destaque .titulo {
+    margin-top: 5%;
+    font-size: 50px;
+    font-weight: 200;
+    color: var(--color4);
+    
+}
+
 .filme-destaque .descricao {
+    font-size: 20px;
+    color: var(--color6);
     margin-top: 10px;
     margin-bottom: 40px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.filme-destaque .titulo {
-    margin-top: 15%;
-    font-size: 40px;
-    font-weight: 100;
-    color: var(--color1);
+    background-color: var(--color4-transparent);
+    border-radius: 5px;
 }
 
 .botao {
-    background-color: var(--color2-transparent);
+    background-color: var(--color4-transparent);
     border: none;
-    color: var(--color1);
+    border-radius: 5px;
+    color: var(--color6);
 
-    padding: 15px 30px;
+    padding: 10px 25px;
     margin-right: 15px;
-    font-size: 12px;
+
 
     cursor: pointer;
     transition: .5s ease all;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .botao:hover {
@@ -136,6 +149,7 @@ header nav a:hover {
     margin-right: auto;
     padding: 0 50px;
     max-width: 1600px;
+    border-radius: 15%;
 }
 
 .carousel-movies h3 {
@@ -153,10 +167,17 @@ header nav a:hover {
     cursor: pointer;
 }
 
+.carousel-movies .img-thumbnail {
+    border-radius: 15px;
+    
+    background-image: linear-gradient(rgba(57, 57, 57, 1), rgba(57, 57, 57, .7));
+}
+
 .carousel-movies img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 35%;
 
 }
 
@@ -166,5 +187,5 @@ header nav a:hover {
     margin-top: 35px;
     padding: 15px 0px;
     font-size: 20px;
-    background-color: var(--color6);
+    background-color: var(--color4);
 }
