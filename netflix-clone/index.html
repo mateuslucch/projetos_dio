@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/camera.png">
 
     <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -27,7 +28,11 @@
 <body>
     <header>
         <div class="container">
-            <h2 class="logo">YE OLDE FLIX</h2>
+            <div class="logo">
+                <h2 class="logo">YE OLDE FLIX</h2>
+                <img src="./img/camera.png" alt="camera image" srcset="">
+            </div>
+
             <nav>
                 <a href="#">Inicio</a>
                 <a href="#">Séries</a>
@@ -38,7 +43,7 @@
     </header>
 
     <main>
-        <div class="filme-destaque">            
+        <div class="filme-destaque">
             <div class="container">
                 <h3 class="titulo">Le Voyage Dans la Lune (1902)</h3>
                 <p class="descricao">Le Voyage Dans la Lune (Trip to the Moon, in English) is perhaps Georges Méliès'
@@ -56,50 +61,147 @@
                 </div>
             </div>
         </div>
-        <!-- carrosel de filmes -->
-        <div class="carousel-movies">
+
+        <!-- carrossel de filmes -->
+        <div class="carousel-movies popular">
             <div class="carousel-background">
                 <h3>Outros Filmes</h3>
-                <div id="pop-movies" class="owl-carousel owl-theme">                    
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/Gertie/ " data-movie-title="Gertie The Dinosaur (1914)">
-                        <img src="./img/220px-Gertie_the_Dinosaur_poster.jpg" alt="filme 1 icone" srcset="">
-                    </div>
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/LaGrenouille/" data-movie-title="La Grenouille (1908)">
-                        <img src="./img/The-Frog.jpg" alt="filme 2 icone" srcset="">
-                    </div>
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/DogFactory1904EdisonManufacturingCompanyUsa/" data-movie-title="Dog Factory - part 1 (1904)">
-                        <img src="./img/DogFactory1904-01.jpg" alt="filme 3 icone" srcset="">
-                    </div>
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/Frankenstein1910/" data-movie-title="Frankenstein (1910)">
-                        <img src="./img/frankensteinogle11.png" alt="filme 4 icone" srcset="">
-                    </div>
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/TheGreatTrainRobbery1903_201307/" data-movie-title="The Great Train Robbery (1903)">
-                        <img src="./img/greattrainrobbery.jpeg" alt="filme 5 icone" srcset="">
-                    </div>
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/silent-baron-munchausens-dream/" data-movie-title="Baron Munchausens Dream (1911)">
-                        <img src="./img/images-6.jpeg" alt="filme 6 icone" srcset="">
-                    </div>
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/LeChaudronInfernal/" data-movie-title="Le Chaudron Infernal (1903)">
-                        <img src="./img/Le_Chaudron_infernal.jpg" alt="filme 7 icone" srcset="">
-                    </div>
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/ScroogeOrMarleysGhost1901/" data-movie-title="Scrooge Or Marleys Ghost (1901)">
+                <div id="pop-movies" class="owl-carousel owl-theme">
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/ScroogeOrMarleysGhost1901/"
+                        data-movie-title="Scrooge Or Marleys Ghost (1901)">
                         <img src="./img/scrooge-thumb.jpg" alt="filme 8 icone" srcset="">
                     </div>
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/The_Christmas_Angel/" data-movie-title="The Christmas Angel (1904)">
+                    <div class="item img-thumbnail"
+                        data-url="https://archive.org/embed/TheGreatTrainRobbery1903_201307/"
+                        data-movie-title="The Great Train Robbery (1903)">
+                        <img src="./img/greattrainrobbery.jpeg" alt="filme 5 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/LeChaudronInfernal/"
+                        data-movie-title="Le Chaudron Infernal (1903)">
+                        <img src="./img/Le_Chaudron_infernal.jpg" alt="filme 7 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail"
+                        data-url="https://archive.org/embed/DogFactory1904EdisonManufacturingCompanyUsa/"
+                        data-movie-title="Dog Factory - part 1 (1904)">
+                        <img src="./img/DogFactory1904-01.jpg" alt="filme 3 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/The_Christmas_Angel/"
+                        data-movie-title="The Christmas Angel (1904)">
                         <img src="./img/the-crhistmas-angel.jpg" alt="filme 9 icone" srcset="">
                     </div>
-                    <div class="item img-thumbnail" data-url="https://archive.org/embed/TheGeneral1926/" data-movie-title="The General (1926)">
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/LaGrenouille/"
+                        data-movie-title="La Grenouille (1908)">
+                        <img src="./img/The-Frog.jpg" alt="filme 2 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/Frankenstein1910/"
+                        data-movie-title="Frankenstein (1910)">
+                        <img src="./img/frankensteinogle11.png" alt="filme 4 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/silent-baron-munchausens-dream/"
+                        data-movie-title="Baron Munchausens Dream (1911)">
+                        <img src="./img/images-6.jpeg" alt="filme 6 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/Gertie/ "
+                        data-movie-title="Gertie The Dinosaur (1914)">
+                        <img src="./img/220px-Gertie_the_Dinosaur_poster.jpg" alt="filme 1 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/TheGeneral1926/"
+                        data-movie-title="The General (1926)">
                         <img src="./img/the-general-buster-keaton-3.jpg" alt="filme 10 icone" srcset="">
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="carousel-movies">
+            <div class="carousel-background">
+                <h3>1800s-1900</h3>
+                <div id="seculo-19" class="owl-carousel owl-theme">
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/ScroogeOrMarleysGhost1901/"
+                        data-movie-title="Scrooge Or Marleys Ghost (1901)">
+                        <img src="./img/scrooge-thumb.jpg" alt="filme 8 icone" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-movies">
+            <div class="carousel-background">
+                <h3>1901-1910</h3>
+                <div id="anos-zero" class="owl-carousel owl-theme">
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/ScroogeOrMarleysGhost1901/"
+                        data-movie-title="Scrooge Or Marleys Ghost (1901)">
+                        <img src="./img/scrooge-thumb.jpg" alt="filme 8 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail"
+                        data-url="https://archive.org/embed/TheGreatTrainRobbery1903_201307/"
+                        data-movie-title="The Great Train Robbery (1903)">
+                        <img src="./img/greattrainrobbery.jpeg" alt="filme 5 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/LeChaudronInfernal/"
+                        data-movie-title="Le Chaudron Infernal (1903)">
+                        <img src="./img/Le_Chaudron_infernal.jpg" alt="filme 7 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/The_Christmas_Angel/"
+                        data-movie-title="The Christmas Angel (1904)">
+                        <img src="./img/the-crhistmas-angel.jpg" alt="filme 9 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail"
+                        data-url="https://archive.org/embed/DogFactory1904EdisonManufacturingCompanyUsa/"
+                        data-movie-title="Dog Factory - part 1 (1904)">
+                        <img src="./img/DogFactory1904-01.jpg" alt="filme 3 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/LaGrenouille/"
+                        data-movie-title="La Grenouille (1908)">
+                        <img src="./img/The-Frog.jpg" alt="filme 2 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/Frankenstein1910/"
+                        data-movie-title="Frankenstein (1910)">
+                        <img src="./img/frankensteinogle11.png" alt="filme 4 icone" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-movies">
+            <div class="carousel-background">
+                <h3>1911-1920</h3>
+                <div id="anos-10" class="owl-carousel owl-theme">
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/silent-baron-munchausens-dream/"
+                        data-movie-title="Baron Munchausens Dream (1911)">
+                        <img src="./img/images-6.jpeg" alt="filme 6 icone" srcset="">
+                    </div>
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/Gertie/ "
+                        data-movie-title="Gertie The Dinosaur (1914)">
+                        <img src="./img/220px-Gertie_the_Dinosaur_poster.jpg" alt="filme 1 icone" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-movies">
+            <div class="carousel-background">
+                <h3>1920-1931</h3>
+                <div id="anos-20" class="owl-carousel owl-theme">
+                    <div class="item img-thumbnail" data-url="https://archive.org/embed/TheGeneral1926/"
+                        data-movie-title="The General (1926)">
+                        <img src="./img/the-general-buster-keaton-3.jpg" alt="filme 10 icone" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sources-link">
+            Fonte:
+            <a href="https://publicdomainreview.org">Public Domain Review</a>
+            <a href="https://archive.org">Internet Archive</a>
+        </div>
     </main>
 
     <footer>
         <div class="footer">
+            <img class="camera-image" src="./img/camera.png" alt="camera image" srcset="">
             Webpage by: Mateus Antonio Lucchese
+
         </div>
     </footer>
 
