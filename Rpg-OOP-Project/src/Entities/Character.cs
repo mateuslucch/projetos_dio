@@ -32,6 +32,7 @@ namespace RpgProject
 
         public virtual string Attack(Characters target)  // virtual allow override over this method
         {
+            if (target == null) { return "All targets are dead!"; }
             target.TakeDamage(HitPoints);
             return $" {this.Name} attacked!";
         }

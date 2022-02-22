@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/d/programação/bootcamp/dio_bootcamp/projetos_dio/rpg-abstraction/RpgProject/RpgProject.csproj",
+      "projectUniqueName": "/mnt/d/programação/bootcamp/dio_bootcamp/projetos_dio/Rpg-OOP-Project/RpgProject.csproj",
       "projectName": "RpgProject",
-      "projectPath": "/mnt/d/programação/bootcamp/dio_bootcamp/projetos_dio/rpg-abstraction/RpgProject/RpgProject.csproj",
+      "projectPath": "/mnt/d/programação/bootcamp/dio_bootcamp/projetos_dio/Rpg-OOP-Project/RpgProject.csproj",
       "packagesPath": "/home/mateuslucch/.nuget/packages/",
-      "outputPath": "/mnt/d/programação/bootcamp/dio_bootcamp/projetos_dio/rpg-abstraction/RpgProject/obj/",
+      "outputPath": "/mnt/d/programação/bootcamp/dio_bootcamp/projetos_dio/Rpg-OOP-Project/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mateuslucch/.nuget/NuGet/NuGet.Config"

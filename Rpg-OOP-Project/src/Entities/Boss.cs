@@ -18,24 +18,21 @@ namespace RpgProject
 
         public override string Attack(Characters target)
         {
+            if (target == null) { return $"{this.Name} will not attack. All possible targets are dead!"; }
             // sort number, see if boss hit target
             Random rndNumber = new Random();
             int hitChance = rndNumber.Next(10);
 
-            if (hitChance > 5)
+            if (hitChance > 4)
             {
                 target.TakeDamage(HitPoints);
                 return
-    $@" 
-    {this.Name} the {this.CharacterType} hit {target.Name}! 
-    {target.Name} took {this.HitPoints} points of damage";
+    $@" {this.Name} the {this.CharacterType} hit {target.Name}! {target.Name} took {this.HitPoints} points of damage";
             }
             else
             {
                 return
-    $@" 
-    {this.Name} the {this.CharacterType} attacked, 
-    but missed the target...";
+    $@" {this.Name} the {this.CharacterType} attacked, but missed the target...";
             }
 
         }

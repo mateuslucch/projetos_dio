@@ -10,18 +10,32 @@
             List<Characters> heroesList = new List<Characters>();
             List<Characters> enemiesList = new List<Characters>();
 
+
+            // heroes and enemies instantiate
             Knight knight = new Knight("Arus", 12, "Knight", 25, 100);
-            Wizard wizard = new Wizard("Jennica", 23, "White Wizard", 20, 100);
             heroesList.Add(knight);
-            heroesList.Add(wizard);
+            Wizard wizard1 = new Wizard("Jennica1", 23, "White Wizard", 20, 100);
+            heroesList.Add(wizard1);
+            Wizard wizard2 = new Wizard("Jennica2", 23, "White Wizard", 20, 100);
+            heroesList.Add(wizard2);
+            Wizard wizard3 = new Wizard("Jennica3", 23, "White Wizard", 20, 100);
+            heroesList.Add(wizard3);
 
             Boss theDemon = new Boss("Shadow Killoran", 99, "Boss", 35, 500);
             enemiesList.Add(theDemon);
+            Wizard enemyWizard1 = new Wizard("Spourtes1", 11, "Warlock", 15, 90);
+            enemiesList.Add(enemyWizard1);
+            Wizard enemyWizard2 = new Wizard("Spourtes2", 11, "Warlock", 15, 90);
+            enemiesList.Add(enemyWizard2);
+            Wizard enemyWizard3 = new Wizard("Spourtes3", 11, "Warlock", 15, 90);
+            enemiesList.Add(enemyWizard3);
+
 
             Console.Clear();
-            Console.WriteLine($@"        Welcome to the epic battle!");
+            Console.WriteLine($@"        WELCOME TO THE EPIC BATTLE!");
 
             Console.WriteLine("");
+            // heroes list
             Console.Write($@"            Known the heroes:            ");
             foreach (Characters hero in heroesList)
             {
@@ -30,6 +44,7 @@
             }
 
             Console.WriteLine("");
+            // enemies list
             Console.Write($@"            Known the enemies:            ");
             foreach (Characters enemie in enemiesList)
             {
@@ -40,6 +55,7 @@
             Console.WriteLine("Press enter to see the most epic battle in the world!");
             ConsoleEnter("");
 
+            // BATTLE START
             while (battle)
             {
                 Console.Clear();
@@ -74,26 +90,17 @@
                 Console.ResetColor();
 
                 Console.WriteLine("");
-
-                Console.Write($@"
-            {knight.Name} life:     {knight.Life}
-            {wizard.Name} life:     {wizard.Life}
-            {theDemon.Name} life:   {theDemon.Life}
-            ");
+                Console.WriteLine("Heroes Lifes");
+                ShowHp(heroesList);
+                Console.WriteLine("Enemies Lifes");
+                ShowHp(enemiesList);
 
                 Console.WriteLine("");
 
                 // check lifes individually so enemies (or heroes) stop attacking the dead ones
                 // note: to use a reserved word as a variable, put the @ in front
-                foreach (Characters character in heroesList)
-                {
-                    if (character.isDead == true)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"Hero {character.Name} is dead.");
-                        Console.ResetColor();
-                    }
-                }
+                ShowDeads(heroesList);
+                ShowDeads(enemiesList);
 
                 Console.WriteLine("");
 
@@ -122,6 +129,28 @@
             }
         }
 
+        private static void ShowHp(List<Characters> charactersList)
+        {
+            foreach (Characters @char in charactersList)
+            {
+                Console.WriteLine($@"Name: {@char.Name} HP:{@char.Life}");
+            }
+        }
+
+        private static void ShowDeads(List<Characters> charactersList)
+        {
+            foreach (Characters character in charactersList)
+            {
+                if (character.isDead == true)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{character.Name} is dead.");
+                    Console.ResetColor();
+                }
+            }
+        }
+
+        // foreach attackers, check if attacker is not dead and attack
         private static void Attack(List<Characters> attackers, List<Characters> targets)
         {
             foreach (Characters @char in attackers)
@@ -133,25 +162,27 @@
             }
         }
 
-        // sort and return one target index from a character list
-        private static Characters ChooseTarget(List<Characters> chars)
+        // sort and return one target (not dead) object from a character list
+        private static Characters ChooseTarget(List<Characters> target)
         {
             int targetIndex;
-            while (true)
+            targetIndex = 0;
+            // check if all possible targets are dead (infinite lop without this)
+            if (CheckAllDead(target)) { return null; }
+            else
             {
-                targetIndex = 0;
-                if (chars.Count > 1)
+                if (target.Count > 1)
                 {
-                    Random rndNumber = new Random();
-                    targetIndex = rndNumber.Next(chars.Count);
-                    if (!chars[targetIndex].isDead)
+                    while (true)
                     {
-                        break;
+                        Random rndNumber = new Random();
+                        targetIndex = rndNumber.Next(target.Count);
+
+                        if (!target[targetIndex].isDead) { break; }
                     }
                 }
-                else { break; }
             }
-            return chars[targetIndex];
+            return target[targetIndex];
         }
 
         // returns true if all characters on list are dead
@@ -179,7 +210,5 @@
                 if (Console.ReadLine() == "") { break; }
             }
         }
-
-
     }
 }

@@ -18,10 +18,10 @@ namespace RpgProject
 
         public override string Attack(Characters target)
         {
+            if (target == null) { return $"{this.Name} will not attack. All possible targets are dead!"; }
             target.TakeDamage(HitPoints);
             return 
-    $@" 
-    {this.Name} the {this.CharacterType} charged with sword!";
+    $@"{this.Name} the {this.CharacterType} charged {target.Name} with sword!";
         }
     }
 }
