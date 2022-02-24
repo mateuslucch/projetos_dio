@@ -1,3 +1,5 @@
+using System;
+
 namespace RpgProject
 {
     public class Boss : Characters
