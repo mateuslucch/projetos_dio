@@ -1,4 +1,8 @@
-﻿namespace RpgProject
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace RpgProject
 {
     internal class Program
     {
@@ -10,8 +14,7 @@
             List<Characters> heroesList = new List<Characters>();
             List<Characters> enemiesList = new List<Characters>();
 
-
-            // heroes and enemies instantiate
+            // heroes and enemies
             Knight knight = new Knight("Arus", 12, "Knight", 25, 100);
             heroesList.Add(knight);
             Wizard wizard1 = new Wizard("Jennica1", 23, "White Wizard", 20, 100);
@@ -185,7 +188,7 @@
             return target[targetIndex];
         }
 
-        // returns true if all characters on list are dead
+        // returns true if all characters in the list are dead
         private static bool CheckAllDead(List<Characters> characters)
         {
             int listDeads = 0;
