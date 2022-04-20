@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "/home/mateuslucch/.nuget/packages/": {}
+    "/home/mateus/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/d/programação/bootcamp/dio_bootcamp/projetos_dio/Rpg-OOP-Project/RpgProject.csproj",
+      "projectUniqueName": "/media/mateus/Games/programacao/bootcamp/dio_bootcamp/projetos_dio/Rpg-OOP-Project/RpgProject.csproj",
       "projectName": "RpgProject",
-      "projectPath": "/mnt/d/programação/bootcamp/dio_bootcamp/projetos_dio/Rpg-OOP-Project/RpgProject.csproj",
-      "packagesPath": "/home/mateuslucch/.nuget/packages/",
-      "outputPath": "/mnt/d/programação/bootcamp/dio_bootcamp/projetos_dio/Rpg-OOP-Project/obj/",
+      "projectPath": "/media/mateus/Games/programacao/bootcamp/dio_bootcamp/projetos_dio/Rpg-OOP-Project/RpgProject.csproj",
+      "packagesPath": "/home/mateus/.nuget/packages/",
+      "outputPath": "/media/mateus/Games/programacao/bootcamp/dio_bootcamp/projetos_dio/Rpg-OOP-Project/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/mateuslucch/.nuget/NuGet/NuGet.Config"
+        "/home/mateus/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

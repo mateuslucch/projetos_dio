@@ -1,0 +1,62 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.board {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: black;
+    width: 300px;
+    height: 300px;
+    gap: 5px;
+}
+
+.line1,
+.line2,
+.line3 {
+    display: flex;
+    align-items: stretch;
+    flex-grow: 1;
+    gap: 5px;
+}
+
+.quadrado {
+    /*text-align: center;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4682b4;
+    font-size: 3em;
+    cursor: pointer;
+    color: #000;
+    /* color: steelblue; */
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0%;
+}
+
+.jogador,
+.vencedor {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    background: #eee;
+    cursor: pointer;
+}
