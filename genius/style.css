@@ -1,0 +1,121 @@
+:root {
+    --color1: #262626;
+    --color2: #3D3D3D;
+    --color2-transparent: #3d3d3d7e;
+    --color3: #4F4F4F;
+    --color4: #7F7F7F;
+    --color4-transparent: #7f7f7f5b;
+    --color5: #393939;
+    --color6: #1E1E1E;
+    /* individuals colors */
+    --border-div-color: var(--color4);
+    /* sizes */
+    --border-div: 5px;
+}
+
+body {
+    font-family: 'Platonick', 'Arial', Times, serif;
+    color: antiquewhite;
+    margin: 0;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--color2);
+    border: var(--border-div) solid var(--border-div-color);
+    margin: 0, 150px, 0, 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: stretch;
+    max-width: 1200px;
+}
+
+.title,
+.status {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.title {}
+
+.main-game {
+    border-top: var(--border-div) solid var(--border-div-color);
+    display: flex;
+    justify-content: center;
+}
+
+
+/* left UI styles*/
+
+.left-ui {
+    border-right: var(--border-div) solid var(--border-div-color);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+button {
+    margin: 10px;
+    padding: 5px;
+}
+
+
+/* genius board styles*/
+
+.genius-board {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 5;
+}
+
+.color-buttons {
+    display: grid;
+    grid-template-areas: 'green red ' 'yellow blue';
+    grid-gap: 10px;
+    /*border-radius: 100%;*/
+    width: 500px;
+    height: 500px;
+}
+
+.blue {
+    grid-area: blue;
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+}
+
+.red {
+    grid-area: red;
+    background-color: red;
+    border-top-right-radius: 100%;
+}
+
+.yellow {
+    grid-area: yellow;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
+.green {
+    grid-area: green;
+    background-color: green;
+    border-top-left-radius: 100%;
+}
+
+.blue,
+.yellow,
+.red,
+.green {
+    border: 5px solid black;
+}
+
+.selected {
+    opacity: 0.3;
+}
