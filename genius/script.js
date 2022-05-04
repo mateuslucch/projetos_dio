@@ -9,6 +9,11 @@ let audio = [
     new Audio('./assets/sounds/Randomize3.wav'),
     new Audio('./assets/sounds/Randomize4.wav'),
 ];
+// set audio volume
+let audioVolume = 0.6;
+for (i in audio) {
+    audio[i].volume = audioVolume;
+}
 let muteAudio = false;
 let muteButton = document.getElementById('mute-button');
 
@@ -28,8 +33,10 @@ class GeniusButton {
 
     changeColor(time) {
         setTimeout(() => {
-            this.clickSound();
             this._color.classList.add('selected');
+            if (!muteAudio) {
+                this._sound.play();
+            }
         }, time);
         // time to change back
         setTimeout(() => {
@@ -70,28 +77,56 @@ let playerTurn = false;
 let gameEnded = true;
 let playOrderDelay = 400;
 
+// called from start button
+let playGame = () => {
+    statusText.innerHTML = ('Jogo iniciado! Aguarde...');
+    resetGame();
+    startAnimation();
+    gameEnded = false;
+    setTimeout(() => {
+        shuffleOrder();
+    }, 2000)
+}
+
 // cria ordem aleatória
 let shuffleOrder = () => {
     // sorteia um numero de 1 a tamanho da lista de botões
     let genBtnIndex = Math.floor(Math.random() * geniusBtnList.length);
     // atribui um dos objetos da lista, usando o numero sorteado (index)
     order[order.length] = geniusBtnList[genBtnIndex];
-    // esvazia o array dos clicados    
+    // esvazia o array dos clicados   
+    setInterval
     playOrder();
 }
 
 let playOrder = () => {
     clickedOrder = [];
-    statusText.innerHTML = ('Escolhendo ordem...');
+    statusText.innerHTML = ('Escolhendo a ordem...');
     let totalTime = 0;
     for (let element in order) {
         order[element].changeColor(totalTime);
         totalTime += playOrderDelay;
     }
     if (totalTime === order.length * playOrderDelay) {
-        statusText.innerHTML = ('Clique na ordem...');
-        totalTime = 0;
-        playerTurn = true;
+        setTimeout(() => {
+            statusText.innerHTML = ('Clique na ordem...');
+            totalTime = 0;
+            playerTurn = true;
+        }, totalTime)
+    }
+}
+
+let startAnimation = () => {
+    let totalTime = 0;
+    for (let element in geniusBtnList) {
+        geniusBtnList[element].changeColor(totalTime);
+        totalTime += 200;
+    }
+    if (totalTime === geniusBtnList.length * playOrderDelay) {
+        setTimeout(() => {
+            totalTime = 0;
+
+        }, totalTime)
     }
 }
 
@@ -110,6 +145,7 @@ let checkOrder = () => {
     for (let i in clickedOrder) {
         // mistakes path
         if (clickedOrder[i] != order[i]) {
+            clickedOrder = [];
             playerTurn = false;
             tries--;
             triesText.innerHTML = `Tentativas: ${tries}`;
@@ -120,21 +156,22 @@ let checkOrder = () => {
                 statusText.innerHTML = "Errado!"
                 setTimeout(() => {
                     playWrong();
-                }, 500)
+                }, 600)
             }
-
         }
     }
     // right choices
     if (clickedOrder.length == order.length) {
+        clickedOrder = [];
+        playerTurn = false;
         statusText.innerHTML = ('Muito Bem!');
         score++;
         if (score < 10) {
-            scoreText.innerHTML = '0' + score;
-        } else { scoreText.innerHTML = score; }
+            scoreText.innerHTML = `Score: 0${score}`;
+        } else { scoreText.innerHTML = `Score: ${score}`; }
         //console.log(`Pontualção: ${score}\n Você acertou! Iniciando próximo nível!`);
         setTimeout(() => {
-            nextLevel();
+            shuffleOrder();
         }, 2000);
     }
 }
@@ -144,17 +181,8 @@ let click = (element) => {
     if (!gameEnded && playerTurn == true) {
         clickedOrder[clickedOrder.length] = element;
         element.changeColor(0);
-        if (muteAudio == false) {
-            element.clickSound();
-        }
-
         checkOrder();
     }
-}
-
-// função para proximo nivel do jogo
-let nextLevel = () => {
-    shuffleOrder();
 }
 
 let muteAudioButton = () => {
@@ -170,23 +198,31 @@ let muteAudioButton = () => {
 
 let gameOverPath = () => {
     gameEnded = true;
-    playerTurn = false;
-    statusText.innerHTML = `Você perdeu! Score máximo: ${score} \n Aperte start para começar de novo`;
+    statusText.innerHTML = `Você perdeu! \n Aperte start para começar de novo`;
+    scoreText.innerHTML = `Max Score: ${score}`;
 }
 
 let startGame = () => {
     statusText.innerHTML = `Bem vindo ao Genius! \n Clique em start para começar!`;
 }
 
-// called from start button
-let playGame = () => {
-    gameEnded = false;
+let resetGame = () => {
+    // reset all timeouts 
+    resetTimeouts();
+    playerTurn = false;
     order = [];
     clickedOrder = [];
     score = 00;
+    scoreText.innerHTML = `Score: 0${score}`;
     tries = totalTries;
     triesText.innerHTML = `Tentativas: ${tries}`;
-    nextLevel();
+}
+
+let resetTimeouts = () => {
+    var highestTimeoutId = setTimeout(";");
+    for (var i = 0; i < highestTimeoutId; i++) {
+        clearTimeout(i);
+    }
 }
 
 // eventos clique para as cores

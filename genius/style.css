@@ -40,7 +40,9 @@ body {
     font-size: 30px;
 }
 
-.title {}
+.status {
+    height: 50px;
+}
 
 .main-game {
     border-top: var(--border-div) solid var(--border-div-color);
@@ -53,17 +55,27 @@ body {
 
 .left-ui {
     border-right: var(--border-div) solid var(--border-div-color);
-    padding: 50px;
+    width: 300px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
+}
+
+.quantitatives {
+    height: 100px;
+}
+
+.buttons {
+    display: flex;
 }
 
 button {
+    font-size: 20px;
     margin: 10px;
     padding: 5px;
+    width: 125px;
 }
 
 
@@ -73,14 +85,14 @@ button {
     padding: 50px;
     display: flex;
     justify-content: center;
-    flex-grow: 5;
+    flex-grow: 0;
+    flex-basis: 0;
 }
 
 .color-buttons {
     display: grid;
     grid-template-areas: 'green red ' 'yellow blue';
     grid-gap: 10px;
-    /*border-radius: 100%;*/
     width: 500px;
     height: 500px;
 }
